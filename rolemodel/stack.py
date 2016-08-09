@@ -89,6 +89,7 @@ class Stack(object):
             LOG.debug(response)
         except Exception as e:
             if 'ValidationError' in str(e):
+                LOG.info(e)
                 LOG.info('No Updates Required')
             else:
                 LOG.exception('Unable to update stack')
